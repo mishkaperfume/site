@@ -4,20 +4,25 @@
 <meta name="description" content="MISHKA — luxury perfume. Warm, elegant, timeless.">
 <style>
   :root{--bg:#2b1d17;--gold:#d1b47b;--text:#f5f0eb;--muted:#d6c6a7}
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--text);
-            font-family:Didot,"Bodoni MT",Georgia,serif;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:900px;margin:0 auto;padding:48px 20px;text-align:center}
-  .product{display:flex;flex-direction:column;align-items:center;gap:14px}
-  /* TALL RECTANGLE PLACEHOLDER (no text) */
-  .visual{width:540px;max-width:92vw;height:820px;margin:0 auto;border-radius:10px;
-          border:1px solid rgba(209,180,123,.28);
-          background:linear-gradient(145deg,#3b2a22 0%, #1f140f 100%);}
-  .brand{margin:8px 0 0;font-size:44px;letter-spacing:6px;color:var(--gold)}
-  .tag{margin:0 0 14px;color:var(--muted)}
+  *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Didot,"Bodoni MT",Georgia,serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:48px 20px;text-align:center}
+  .product{display:flex;flex-direction:column;align-items:center;gap:16px}
+
+  /* Rectangle placeholder (replace background-image with your real image URL later) */
+  .ph{
+    width:520px; max-width:92vw; aspect-ratio:3/4; /* rectangle */
+    border:1px solid rgba(209,180,123,.35); border-radius:10px;
+    background:#3b2a22;
+    background-image: none; /* e.g.: url("assets/product.jpg") */
+    background-size:cover; background-position:center;
+    display:grid; place-items:center; color:#d6c6a7; letter-spacing:.6px
+  }
+  .brand{margin:6px 0 0;font-size:44px;letter-spacing:6px;color:var(--gold)}
+  .tag{margin:0 6px 6px;color:var(--muted)}
   .title{margin:6px 0 0;font-size:22px}
   .notes{margin:6px 0 0;color:var(--muted)}
-  .price{margin:6px 0 10px;color:var(--gold);font-weight:700}
+  .price{margin:8px 0 10px;color:var(--gold);font-weight:700}
   .btn{display:inline-block;background:var(--gold);color:#2b1d17;padding:12px 22px;border-radius:6px;
        text-decoration:none;font-weight:700}
   .btn:hover{filter:brightness(1.07)}
@@ -26,12 +31,9 @@
 </head><body>
   <main class="wrap">
     <section class="product" aria-labelledby="p1">
-      <!-- Replace this .visual block with a real <img src="assets/product.jpg"> later if you want -->
-      <div class="visual" role="img" aria-label="Product image placeholder"></div>
-
+      <div class="ph">PRODUCT IMAGE</div>
       <h1 class="brand">MISHKA</h1>
       <p class="tag">Luxury perfume — warm, elegant, timeless.</p>
-
       <h2 id="p1" class="title">Eau de Parfum — 50&nbsp;mL</h2>
       <p class="notes">Top: bergamot, aldehydes · Heart: jasmine, rose, ylang · Base: orris, sandalwood, musk.</p>
       <p class="price">$89.00</p>
