@@ -7,22 +7,23 @@
   *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);
   font-family:Didot,"Bodoni MT",Georgia,serif;-webkit-font-smoothing:antialiased}
   .wrap{max-width:880px;margin:0 auto;padding:48px 20px;text-align:center}
-  .product{display:flex;flex-direction:column;align-items:center;gap:16px}
 
-  /* Rectangle placeholder (replace background-image with your real image URL later) */
+  /* Brand + tagline first */
+  .brand{margin:0 0 6px;font-size:44px;letter-spacing:6px;color:var(--gold)}
+  .tag{margin:0 0 18px;color:var(--muted)}
+
+  /* Smaller centered rectangle placeholder under tagline */
   .ph{
-    width:520px; max-width:92vw; aspect-ratio:3/4; /* rectangle */
-    border:1px solid rgba(209,180,123,.35); border-radius:10px;
-    background:#3b2a22;
-    background-image: none; /* e.g.: url("assets/product.jpg") */
-    background-size:cover; background-position:center;
-    display:grid; place-items:center; color:#d6c6a7; letter-spacing:.6px
+    width:340px; max-width:85vw; aspect-ratio:3/4;
+    margin:16px auto 16px; border:1px solid rgba(209,180,123,.35); border-radius:10px;
+    background:#3b2a22; display:grid; place-items:center; color:#d6c6a7; letter-spacing:.6px
   }
-  .brand{margin:6px 0 0;font-size:44px;letter-spacing:6px;color:var(--gold)}
-  .tag{margin:0 6px 6px;color:var(--muted)}
-  .title{margin:6px 0 0;font-size:22px}
-  .notes{margin:6px 0 0;color:var(--muted)}
-  .price{margin:8px 0 10px;color:var(--gold);font-weight:700}
+  /* Replace with your real image later:
+     .ph{ background:#3b2a22 url("assets/product.jpg") center/cover no-repeat; color:transparent } */
+
+  .title{margin:10px 0 0;font-size:22px}
+  .notes{margin:8px 0 0;color:var(--muted)}
+  .price{margin:10px 0 12px;color:var(--gold);font-weight:700}
   .btn{display:inline-block;background:var(--gold);color:#2b1d17;padding:12px 22px;border-radius:6px;
        text-decoration:none;font-weight:700}
   .btn:hover{filter:brightness(1.07)}
@@ -30,15 +31,16 @@
 </style>
 </head><body>
   <main class="wrap">
-    <section class="product" aria-labelledby="p1">
-      <div class="ph">PRODUCT IMAGE</div>
-      <h1 class="brand">MISHKA</h1>
-      <p class="tag">Luxury perfume — warm, elegant, timeless.</p>
-      <h2 id="p1" class="title">Eau de Parfum — 50&nbsp;mL</h2>
-      <p class="notes">Top: bergamot, aldehydes · Heart: jasmine, rose, ylang · Base: orris, sandalwood, musk.</p>
-      <p class="price">$89.00</p>
-      <a class="btn" href="https://buy.stripe.com/00wbJ3bYq9M75sJ87q8EM02" target="_blank" rel="noopener">Buy Now</a>
-    </section>
+    <h1 class="brand">MISHKA</h1>
+    <p class="tag">Luxury perfume — warm, elegant, timeless.</p>
+
+    <div class="ph">PRODUCT IMAGE</div>
+
+    <h2 class="title">Eau de Parfum — 50&nbsp;mL</h2>
+    <p class="notes">Top: bergamot, aldehydes · Heart: jasmine, rose, ylang · Base: orris, sandalwood, musk.</p>
+    <p class="price">$89.00</p>
+    <a class="btn" href="https://buy.stripe.com/00wbJ3bYq9M75sJ87q8EM02" target="_blank" rel="noopener">Buy Now</a>
+
     <p class="foot">© <span id="y"></span> MISHKA Perfume</p>
   </main>
   <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
