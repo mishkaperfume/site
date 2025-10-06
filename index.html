@@ -4,37 +4,34 @@
 <meta name="description" content="MISHKA — luxury perfume. Warm, elegant, timeless.">
 <style>
   :root{--bg:#2b1d17;--gold:#d1b47b;--text:#f5f0eb;--muted:#d6c6a7}
-  *{box-sizing:border-box}
-  html,body{height:100%;margin:0;background:var(--bg);color:var(--text);
-            font-family:Didot,"Bodoni MT",Georgia,serif;-webkit-font-smoothing:antialiased}
-  .wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
-        padding:32px;text-align:center}
-  h1{margin:0 0 8px;font-size:44px;letter-spacing:6px;color:var(--gold)}
-  .tag{margin:0 0 28px;color:var(--muted)}
-  .product{display:flex;flex-direction:column;align-items:center;gap:16px}
-  .product img{width:420px;max-width:90vw;height:auto;border-radius:8px;border:1px solid rgba(209,180,123,.25);
-               background:linear-gradient(145deg,#3b2a22,#1f140f)}
-  .price{margin:6px 0 2px;color:var(--gold);font-weight:700}
-  .notes{margin:0 0 8px;color:var(--muted)}
+  *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Didot,"Bodoni MT",Georgia,serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:48px 20px;text-align:center}
+  .product{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .product img{width:480px;max-width:92vw;height:auto;margin:0 auto;border-radius:8px;
+               border:1px solid rgba(209,180,123,.25);background:#3b2a22}
+  .brand{margin:8px 0 0;font-size:44px;letter-spacing:6px;color:var(--gold)}
+  .tag{margin:0 0 14px;color:var(--muted)}
+  .title{margin:6px 0 0;font-size:22px}
+  .notes{margin:6px 0 0;color:var(--muted)}
+  .price{margin:6px 0 10px;color:var(--gold);font-weight:700}
   .btn{display:inline-block;background:var(--gold);color:#2b1d17;padding:12px 22px;border-radius:6px;
        text-decoration:none;font-weight:700}
   .btn:hover{filter:brightness(1.07)}
-  .foot{margin-top:22px;color:var(--muted);font-size:13px}
+  .foot{margin-top:28px;color:var(--muted);font-size:13px}
 </style>
 </head><body>
   <main class="wrap">
-    <h1>MISHKA</h1>
-    <p class="tag">Luxury perfume — warm, elegant, timeless.</p>
-
     <section class="product" aria-labelledby="p1">
-      <!-- Replace src with your real image later -->
-      <img src="https://via.placeholder.com/480x640.png?text=MISHKA+Perfume" alt="MISHKA Eau de Parfum">
-      <h2 id="p1" style="margin:0">Eau de Parfum — 50&nbsp;mL</h2>
-      <p class="price">$89.00</p>
+      <!-- REPLACE src WITH YOUR REAL PRODUCT IMAGE FILE/URL -->
+      <img src="https://via.placeholder.com/600x800.png?text=MISHKA+Perfume" alt="MISHKA Eau de Parfum bottle">
+      <h1 class="brand">MISHKA</h1>
+      <p class="tag">Luxury perfume — warm, elegant, timeless.</p>
+      <h2 id="p1" class="title">Eau de Parfum — 50&nbsp;mL</h2>
       <p class="notes">Top: bergamot, aldehydes · Heart: jasmine, rose, ylang · Base: orris, sandalwood, musk.</p>
+      <p class="price">$89.00</p>
       <a class="btn" href="https://buy.stripe.com/00wbJ3bYq9M75sJ87q8EM02" target="_blank" rel="noopener">Buy Now</a>
     </section>
-
     <p class="foot">© <span id="y"></span> MISHKA Perfume</p>
   </main>
   <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
